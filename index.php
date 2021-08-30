@@ -10,30 +10,30 @@
 </head>
 
 <body>
-    <div>
-        <p>Aplicação para calculo da aposentadoria feito em php</p>
-    </div>
     <div class="container--form">
         <form action='formulario.php' method='POST'>
             <div class="container--style">
-            <div class="input--container">
-                <label>Digite sua idade</label>
-                <input name='idade' type='number' min='16' max='65' />
+                <div class="container--align">
+                <div class="input--container">
+                    <label>Digite sua idade</label>
+                    <input name='idade' type='number' min='16' max='65' required />
+                </div>
+                <div class="input--container">
+                    <label>Tempo contribuição </label>
+                    <input name='carteira' type='number' min='0' max='35' required />
+                </div>
+                <div>
+                    <input type='radio' value='masculino' name='sexo' checked />
+                    <label>Masculino</label>
+                    <input type='radio' value='feminino' name='sexo' />
+                    <label>Feminino</label>
+                </div>
+                <div class="container--button">
+                    <button type='submit'>Calcular</button>
+                </div>
+            
             </div>
-            <div  class="input--container">
-                <label> tempo contribuição em carteira</label>
-                <input name='carteira' type='number' min='0' max='35' />
             </div>
-            <div>
-                <input type='radio' value='masculino' name='sexo' checked />
-                <label>Masculino</label>
-                <input type='radio' value='feminino' name='sexo' />
-                <label>Feminino</label>
-            </div>
-            <div>
-                <button type='submit'>enviar</button>
-            </div>
-
         </form>
     </div>
     </div>

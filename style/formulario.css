@@ -4,30 +4,15 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-   
 }
-/*retirando estilos*/
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0; 
-}
-/*----------*/
 body{
-  background-color: #6489F0;
+  background-color: #6489F0;  
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
 }
-
-/*Formulario*/
-.container--form{
-display: flex;
-justify-content: center;
-margin-top: 10%;
-
-
-
-}
-
-.container--style{
+/*container*/
+.container{
     box-shadow:0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
     height: 310px;
     border-radius: 10px;
@@ -35,29 +20,42 @@ margin-top: 10%;
     padding: 35px 50px;
     width: 300px;
     background-color: white;
-   
+  animation-name: entrada;
+  animation-duration: 1.2s;
+    
+}
 
+@keyframes entrada{
+    from{transform: scale(0);} 
+    to{transform: scale(1); }
 }
-.container--style label{
-    font-size: 16px;
-    margin: 8px  0;
-   
+
+@media (max-width:800px){
+    body{
+        margin-top: 40%;
+    }
 }
-input[type='number']{
-    height: 40px;
-    border-radius:5px ;
-    font-size: 15px;
-    width: 200px;
-    border: 1px solid black;
-    padding-left: 10px;
+
+/*-------------*/
+
+.sucesso{
+   margin-top: 20px ;
+    
+
+    }
+.sucesso p{
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 5px;
+    
 }
-.input--container{
-    display: flex;
-    flex-direction: column;
-}
+
 .container--button{
-    margin-top: 10px;
+    display: flex;
+    justify-content: center ;
+    margin-top: 18px;
 }
+/*button voltar*/
 button{
     height:40px;
     width:203px;
@@ -77,15 +75,18 @@ button:active{
     border: 1px solid #6489F0;
     background-color: #fff;
 }
-input[type='radio'], label{
-    margin: 15px 5px;
-}
-/*--------------*/
+/*-------------*/
 
-@media (max-width:700px) {
-    .container--form{
-        margin-top: 40%;
-    }
+.erro{
+    width: 200px;
     
+    margin-top: 40px;
+}
+.erro p{
+    font-size: 20px;
+}
+.erro h2{
+    color: red;
+    margin-right: 0px;
 }
 
